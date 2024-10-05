@@ -11,7 +11,7 @@
 </head>
 <body>
   
-  <main>
+  <header>
   <nav>
     <img src="images/rakins.png" alt="" width="50px" height="60px">
     <ul class="navlinks">
@@ -24,9 +24,9 @@
     </ul>
     <i class="fa-solid fa-bars nav-toggle"></i>
   </nav>
-</main>
+  </header>
 
-  <div class="flexcontainer">
+  <div class="flexcontainer-0">
 
     <div>
       <img class="img1" src="images/RR.png" alt="" width="400px" height="500px">
@@ -44,7 +44,7 @@
 
      
       <!-- DOWNLOAD CV BUTTON -->
-      <a href="https://drive.google.com/drive/folders/1A7eLb0MP8fTqfgxYKQyZ8tembQqw5tXu" download="https://drive.google.com/drive/folders/1A7eLb0MP8fTqfgxYKQyZ8tembQqw5tXu"><button>Download CV</button></a>
+      <a class="a-button" href="https://drive.google.com/drive/folders/1A7eLb0MP8fTqfgxYKQyZ8tembQqw5tXu" download="https://drive.google.com/drive/folders/1A7eLb0MP8fTqfgxYKQyZ8tembQqw5tXu"><button>Download CV</button></a>
 
       <div class="social-l">follow me
       <a href="https://www.linkedin.com/in/ruth-akinbami-212-graphic-/"><i class="fa-brands fa-linkedin" ></i></a> 
@@ -82,5 +82,14 @@
     </div>
   </footer>
 
+  <script>
+    let toggle = document.querySelector(".nav-toggle")
+    let navlinks = document.querySelector(".navlinks")
+  
+    toggle.addEventListener("click", function(){
+      navlinks.classList.toggle("show")
+    })
+  </script>
+  
 </body>
 </html>

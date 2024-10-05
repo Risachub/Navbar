@@ -29,20 +29,19 @@ nav{
   display: none !important;
 }
 
-.a-link:{
-  color: rgb(237, 34, 237);
+.a-link{
+  color: rgb(255, 90, 118);
 }
-/* .a-link:visited{
-  color: rgb(4, 145, 4);
-} */
+
 .a-link:hover{
   font-size: 18px;
-  columns: rgb(255, 90, 118);
+  columns: rgb(255, 90, 192);
 }
 .active{
   text-decoration: underline;
   color: rgb(255, 90, 118);
 }
+
 /* ..................................... */
 /* CONTAINERS */
 /* ..................................... */
@@ -58,7 +57,19 @@ nav{
   margin: 5px 40px;
 
 }
-
+.flexcontainer p {
+  font-size: 30px;
+}
+.flexcontainer-0{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px 50px;
+}
+.flexcontainer-0 > div{
+  width: 100%;
+  margin: 5px 40px;
+}
 .flexcontainer-2{
   display: flex;
   justify-content: flex-start;
@@ -74,6 +85,7 @@ nav{
 .flexcontainer-3{
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   padding: 50px 150px;
   background-color: rgb(253, 223, 228);
   
@@ -99,10 +111,10 @@ nav{
   padding: 10px;
   border-bottom: rgb(255, 90, 118) double 2px;
 }
-main{
+header{
   background-image: url(images/white&blue&pink.jpg);
   height: 300px;
-  background-position: center;
+  background-size: cover;
 }
 .card{
   width: 100%;
@@ -213,11 +225,11 @@ footer{
   background-color: rgb(255, 90, 118);
   display: flex;
   justify-content: flex-start;
-  padding: 70px 40px;
+  padding: 30px 40px;
 }
 footer > div{
   width: 100%;
-  margin: 5px 40px;
+  margin: 20px 40px;
 
 }
 footer  p, footer a, footer i, footer span{
@@ -225,23 +237,52 @@ footer  p, footer a, footer i, footer span{
 }
 
 /* ........................................... */
-/* Responsiveness Media Query for mobile*/
+/* Responsiveness Media Query for laptop mobile*/
 /* ........................................... */
 @media  screen and (max-width: 500px) {
   nav{position: relative;}
   .navlinks {position: absolute; top: 100%; left: 0; display: none;}
-  .navlinks > li {display: block; margin-bottom: 15px;}
+  .navlinks > li {display: block; margin-bottom: 10px;}
   .nav-toggle {display: flex !important;}
-  .show{display: block}
-} 
-@media screen and (max-width: 300px) { 
-  .flexcontainer{position: relative;}
-  .flexcontainer > div{position: absolute;}
-  /* .flexcontainer-2{position: relative;}
-  .flexcontainer-2 > div{position: absolute;}
-  .flexcontainer-3{position: relative;}
-  .flexcontainer-3 > div{position: absolute;}
-  footer{position: relative;}
-  footer > div{position: absolute;} */
-}
+  .show{display: block;}
+}  
+/* for mobile */
+ @media screen and (max-width:500px) {
+  /* Homepage */
+  .flexcontainer {flex-direction: column; width: 100%; margin-top: 210px; padding-right: 50px;}
+  .flexcontainer > div {width: 100%; padding-right: 60px;}
+  .flexcontainer  h1{font-size: 35px;}
+  .flexcontainer p {font-size: 22px;}
+  button{margin-bottom: 15px; align-content: center; padding: 10px 15px;}
+  .img1 {width: 430px; height: 350px; padding-right: 125px; border-radius: 170px;}
+ /* ............................................................ */
   
+  .flexcontainer-2 {flex-direction: column; width: 100%; padding-right: 50px;}
+  .flexcontainer-2 > div {width: 100%; padding-right: 100px;}
+  .flexcontainer-2 h2{font-size: 30px; text-align: center;}
+  .flexcontainer-2 p {font-size: 13px; padding: 7px 17px;}
+  .illus-1 {width: 100%;}
+
+  /* .......................................................... */
+/* ABOUT PAGE */
+  .flexcontainer-0 {flex-direction: column; width: 100%;}
+  .flexcontainer-0 > div{width: 100%; padding-right: 100px;}
+  .flexcontainer-0 h1{font-size: 40px; text-align: center;}
+  .flexcontainer-0 p{font-size: 14px; padding: 7px 17px;}
+  .a-button {margin-left: 20px;  padding: 10px 15px; font-size: 10px;}
+  .social-l{margin-left: 20px;}
+  
+  /* .......................................................... */
+
+  /* SKILL PAGE */
+  .flexcontainer-3 {flex-direction: column; width: 100%;}
+  .flexcontainer-3 >div {width: 100%; padding-right: 300px;}
+  .flexcontainer-3 p {font-size: 14px;}
+  .skill{padding: 2px 30px; align-items: center;}
+
+  .flexcontainer-4 {flex-direction: column; width: 510px;}
+  footer {flex-direction: column; width: 510px; padding: 5px 30px; font-size: 14px;}
+
+  footer {width: 700px;}
+ }
+ 
